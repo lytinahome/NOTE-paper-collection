@@ -7,6 +7,7 @@ Author: Thanawin Rakthnmanon et al.
   - It is a fast exact search method (not approximate search).
   - It is better than index-based methods and other state-out-of-art method. 
   - The same idea works for both streaming data, and batch offline search.
+  - no parameter is needed; no preprocessing is needed; no query length limitation.
 - DTW is still good for real-time problems and large scale problem.
 
 ### A scenario to implement this method.
