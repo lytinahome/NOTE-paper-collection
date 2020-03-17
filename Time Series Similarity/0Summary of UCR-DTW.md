@@ -12,7 +12,7 @@ Author: Thanawin Rakthnmanon et al.
 
 ### A scenario to implement this method.
 - **gene problems**: (see section 5.3 in the paper) 
-> Set a relative short piece of DNA (with the length of 0.7million) in Human as the target, then use UCR-DTW to find out the closest gene piece (from a 2 billion long DNA query) in other five primates respectively. After that cluster those six DNA pieces. It turns out the clustering relationship reflects the correct biological grouping info. This is an example of how UCR-DTW is used in similary search and further in time series clustering.
+> Set a relative short piece of DNA (with the length of 0.7million) in Human as the target, then use UCR-DTW to find out the closest gene piece (from a 2 billion long DNA query) in other five primates respectively. After that cluster those six DNA pieces. It turns out the clustering hieracy reflects the correct biological grouping info. This is an example of how UCR-DTW is used in similary search and further in time series clustering.
 
 ### What is this method.
 The main idea of this method is to pruning the sequences and filtering out the candidate in order to reduce the needed calculation. 
