@@ -14,7 +14,7 @@ Author: Thanawin Rakthnmanon et al.
 - **gene problems**: (see section 5.3 in the paper) 
 > Set a relative short piece of DNA (with the length of 0.7million) in Human as the target, then use UCR-DTW to find out the closest gene piece (from a 2 billion long DNA query) in other five primates respectively. After that cluster those six DNA pieces. It turns out the clustering relationship reflects the correct biological grouping info. This is an example of how UCR-DTW is used in similary search and further in time series clustering.
 
-### how this method works.
+### What is this method.
 The main idea of this method is to pruning the sequences and filtering out the candidate in order to reduce the needed calculation. 
 
 Below are some Existing tricks:
@@ -52,11 +52,20 @@ Below are some Novel tricks -- called **UCR suite**:
 > there is a trade-off between time complexity and tightness of the lower bound. in pactice we will use all effective LB to prune the data.
 
 **The order of the prunings to consider**:
-1. Early Abandoning of ED and LB; Z-normalization; reordering. Those steps can be done simutanously. Using different type of LB.
+1. Early Abandoning of ED and LB; Z-normalization; reordering. Those steps can be done incrementaly and simutanously. Using different type of LB.
 2. Early Abandoning of LB_keoghEC
 3. Early Abandoning of DTW.
 
-### some take aways from the paper
+### Ideas learned from this paper
+0. z-normalization is prerequisite for the similarity comparision.
+1. The idea of lower bound is important. 1) use lower bound for pruning. 2) compare the time complexity and tightness of lower bound to evaluate the effitiveness of the lower bound.
+2. accumulated floating-point error can be profound if you did more than millions operation.
+3. DTW is an ubiquitous metric but it has limitation itself.
+
+### Limitation of this paper
+the limitation of this paper is mainly about the limitation of the DTW itself. refer to: [DTW limitation](https://www.ques10.com/p/26994/what-are-the-limitation-of-dtw/#:~:text=)
+
+### Some take aways from the paper
 + similarity search is core subroutine in many data mining algorithm.
 + DTW is an ubiquitious distance metrics for sequential data. It outperforms in many dataset.
 + ED is a special case of DTW.
