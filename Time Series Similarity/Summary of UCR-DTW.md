@@ -65,5 +65,6 @@ Below are some Novel tricks -- called **UCR suite**:
 ### code and related work.
 + [code](http://www.cs.ucr.edu/~eamonn/UCRsuite.html)
 + [The DTW project](https://dynamictimewarping.github.io/)
++ [Indexing](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/Exact%20index%20of%20DTW.pdf)
 + [An overview of sequential data method](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/Overview_Experimental_comparison_time_series.pdf)
  
