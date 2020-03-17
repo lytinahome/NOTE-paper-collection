@@ -60,5 +60,5 @@ Below are some Novel tricks -- called **UCR suite**:
 ### code and related work.
 + [code](http://www.cs.ucr.edu/~eamonn/UCRsuite.html)
 + [DTW](https://dynamictimewarping.github.io/)
-+ [Overview](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/Overview_Experimental_comparison_time_series.pdf)
++ [An Overview of sequential data](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/Overview_Experimental_comparison_time_series.pdf)
  
