@@ -50,6 +50,11 @@ Below are some Novel tricks -- called **UCR suite**:
 ![lbtype pruning](pics/diff-lb.PNG)
 > there is a trade-off between time complexity and tightness of the lower bound. in pactice we will use all effective LB to prune the data.
 
+**The order of the prunings to consider**:
+1. Early Abandoning of ED and LB; Z-normalization; reordering. Those steps can be done simutanously. Using different type of LB.
+2. Early Abandoning of LB_keoghEC
+3. Early Abandoning of DTW.
+
 ### some take aways from the paper
 + similarity search is core subroutine in many data mining algorithm.
 + DTW is an ubiquitious distance metrics for sequential data. It outperforms in many dataset.
