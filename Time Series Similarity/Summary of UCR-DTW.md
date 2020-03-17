@@ -59,6 +59,6 @@ Below are some Novel tricks -- called **UCR suite**:
 + other interesting topic in time series: motif dicovery, anomaly detection, clustering, and classification.
 ### code and related work.
 + [code](http://www.cs.ucr.edu/~eamonn/UCRsuite.html)
-+ [DTW](https://dynamictimewarping.github.io/)
-+ [An Overview of sequential data](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/Overview_Experimental_comparison_time_series.pdf)
++ [The DTW project](https://dynamictimewarping.github.io/)
++ [An overview of sequential data method](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/Overview_Experimental_comparison_time_series.pdf)
  
