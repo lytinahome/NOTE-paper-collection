@@ -11,7 +11,7 @@
 
 ### A scenario to implement this method.
 - **gene problems**: (see section 5.3 in the paper) 
-> Using a relative short piece of DNA (with the length of 0.7million) in Human as the target, and find out the genes piece (from a 2 billion long DNA query) in other five primates which is closest to the target respectively using the method proposed in this paper. The cluster those six DNA piece, it turns out the clustering relationship contains the correct biological grouping info. 
+> Using a relative short piece of DNA (with the length of 0.7million) in Human as the target, and find out the genes piece (from a 2 billion long DNA query) in other five primates which is closest to the target respectively using the method proposed in this paper. The cluster those six DNA piece, it turns out the clustering relationship reflects the correct biological grouping info. 
 
 ### how this method works.
 The main idea of this method is to pruning the sequences and filtering out the candidate in order to reduce the needed calculation. 
@@ -19,21 +19,35 @@ The main idea of this method is to pruning the sequences and filtering out the c
 Below are some Existing tricks:
   + using squared distance 
 > this one is intuitive.
-  + using lowering bounding
-> use the lower bound to preprune the candidate subsequence. (details can see [1]) it is mainly for accelerating DTW. There are many types of lower bounds, the key idea of keogh LB is define a envelop of the target sequece. 
+  + using lowering bounding 
+
+![LB pruning](pics/lb.PNG)
+> use the lower bound to preprune the candidate subsequence. It is mainly for accelerating DTW. There are many types of lower bounds, the key idea of keogh LB is define a envelop of the target sequece. 
   + early abandoning of ED and LB_keogh
+
+![Early abd pruning](pics/ed.PNG)
 > abandon the candidate when it exceed the best-so-far LB in halfway.
   + early abandoning of DTW
+
+![DTW pruning](pics/dtw.PNG)
 > abandon the candidate when its DTW[1:k] + LB[k+1:] exceed the best-so-far.
  
 Below are some Novel tricks -- called **UCR suite**:
   + early abandoning of Z-normalization
+
+![Z-normalize pruning](pics/z-normalization.PNG)
 > using a sliding window to normalize the data and calculate the distance. Be careful of the accumulated floating error, need to refresh every millions. 
   + reodering early abandoning
+
+![reorder pruning](pics/ordering.PNG)
 > optimize the ordering to accelerate the early abandoning process.
-  + reversing teh query/data role in LB_keogh
+  + reversing the query/data role in LB_keogh
+  
+![reverse pruning](pics/eq-ec.PNG)
 > envelope the candidate (LB_EC) instead of target (LB_EQ) when calculating the lower bound, when all other lower bounds fail to prune. in fact, the operation won't use overhead space and save time overall. Note that LB_EC doesn't equal to LB_EQ.
   + cascading lower bounds
+
+![lbtype pruning](pics/diff-lb.PNG)
 > there is a trade-off between time complexity and tightness of the lower bound. in pactice we will use all effective LB to prune the data.
 
 ### some take aways from the paper
