@@ -53,7 +53,7 @@ Below are some Novel tricks -- called **UCR suite**:
 ### some take aways from the paper
 + similarity search is core subroutine in many data mining algorithm.
 + DTW is an ubiquitious distance metrics for sequential data. It outperforms in many dataset.
-+ ED is a sepcial case of DTW.
++ ED is a special case of DTW.
 + Normalization is important in the similarity search. in this paper, we use the mean-variance normalization. Each subsequence needs to be normalized individually. 
 + Indexing can help in the search problem but index method has the limitation on large scale problem (the key is each subseq needs to normalized). 
 + other interesting topic in time series: motif dicovery, anomaly detection, clustering, and classification.
