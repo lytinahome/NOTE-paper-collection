@@ -1,6 +1,6 @@
 
-# Searching and Mining Trillions of Time Series Subsequence under Dynamic Time Warping
-
+# [Searching and Mining Trillions of Time Series Subsequence under Dynamic Time Warping](https://github.com/lytinahome/Paper-collection/blob/master/Time%20Series%20Similarity/1.Searching%2Band%2BMining%2BTrillions%2Bof%2BTime%2BSeries%2BSubsequences%2Bunder%2BDynamic%2BTime%2BWarping.pdf)
+Author: Thanawin Rakthnmanon et al. 
 ### The problem it wants to solve and the conclusion. 
 - Solved the problem of **Search on sequential data**: Find the closest subsequence to the target in a massive data file (up to trillion), the distance can be defined by DTW (Dynamic Time Warping) or ED (Euclidean Distance).
 - The paper proposed **UCR-DTW** method to solve the problem above. And...
