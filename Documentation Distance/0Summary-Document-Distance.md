@@ -1,7 +1,7 @@
 # [From Word Embeddings To Document Distances](https://github.com/lytinahome/Paper-collection/blob/master/Documentation%20Distance/2.From%2BWord%2BEmbeddings%2BTo%2BDocument%2BDistances.pdf)
 Author: Matt J. Kusner et al.
 
-### The problem it wants to solve and the conlusion.
+### The problem it wants to solve and the conclusion.
 + The paper defined a new distance function **Word Mover's Distance (WMD)** between text documents. This distance metric can be used in knn algorithm so that to solve the document classification problem.
 + For the distance function, it has the following features:
    - it takes into account the word frequency(by BOW); word sentiment (by word2vec); paper structure (by adding penalty term).
